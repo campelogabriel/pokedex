@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokedexTemplate</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="poke.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="pokecard">
+        <div class="pokecard__header grass">
+          <div class="pokecard__header--name">
+            <div class="pokecard__header--heading">Bulbasaur</div>
+            <div class="pokecard__header--types">
+              <span class="type">Grass</span>
+              <span class="type">Poison</span>
+            </div>
+            <div class="pokecard__header--id">#001</div>
+          </div>
+        </div>
+        <div class="pokecard__stats">
+          <img
+            class="poke__img"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+            alt=""
+          />
+          <div class="pokecard__stats--tabbed">
+            <div tabID="1" class="table tab-1 table-active">About</div>
+            <div tabID="2" class="table tab-2">Base Stats</div>
+            <div tabID="3" class="table tab-3">Evolution</div>
+            <div tabID="4" class="table tab-4">Moves</div>
+          </div>
+          <div class="pokecard__stats--content">
+            <div contentID="1" class="about content">
+              <div class="about__grid">
+                <span class="attribute">Species</span>
+                <span class="value">Seed</span>
+                <span class="attribute">Height</span>
+                <span class="value">0.70 cm</span>
+                <span class="attribute">Weight</span>
+                <span class="value">6.9 kg</span>
+                <span class="attribute">Abilities</span>
+                <span class="value">Overgrow, Chloropgyl</span>
+              </div>
+              <div class="about__breeding">
+                <h3 class="heading-breeding">Breeding</h3>
+                <div class="about__grid">
+                  <span class="attribute">Gender</span>
+                  <span class="value genders">
+                    <span>
+                      <img
+                        width="16"
+                        height="16"
+                        src="https://img.icons8.com/office/16/male.png"
+                        alt="male"
+                      />
+                      <span>87.25%</span>
+                    </span>
+                    <span>
+                      <img
+                        width="16"
+                        height="16"
+                        src="https://img.icons8.com/office/16/female.png"
+                        alt="male"
+                      />
+                      <span>22.75%</span>
+                    </span>
+                  </span>
+                  <span class="attribute">Egg Groups</span>
+                  <span class="value">Monster</span>
+                  <span class="attribute">Egg Cycle</span>
+                  <span class="value">Grass</span>
+                </div>
+              </div>
+            </div>
+            <div contentID="2" class="basestats content hidden">
+              <div class="basestats__grid">
+                <div class="attribute">HP</div>
+                <div class="value">46</div>
+                <div class="bar">
+                  <div
+                    style="width: 46%; background-color: #ec1000"
+                    class="bar__progress"
+                  ></div>
+                </div>
+                <div class="attribute">Attack</div>
+                <div class="value">60</div>
+                <div class="bar">
+                  <div
+                    style="width: 60%; background-color: #28ac00"
+                    class="bar__progress"
+                  ></div>
+                </div>
+                <div class="attribute">Defense</div>
+                <div class="value">48</div>
+                <div class="bar">
+                  <div
+                    style="width: 48%; background-color: #ec1000"
+                    class="bar__progress"
+                  ></div>
+                </div>
+                <div class="attribute">Sp. Atk</div>
+                <div class="value">65</div>
+                <div class="bar">
+                  <div
+                    style="width: 65%; background-color: #28ac00"
+                    class="bar__progress"
+                  ></div>
+                </div>
+                <div class="attribute">Sp. Def</div>
+                <div class="value">65</div>
+                <div class="bar">
+                  <div
+                    style="width: 65%; background-color: #ec1000"
+                    class="bar__progress"
+                  ></div>
+                </div>
+                <div class="attribute">Speed</div>
+                <div class="value">45</div>
+                <div class="bar">
+                  <div
+                    style="width: 45%; background-color: #28ac00"
+                    class="bar__progress"
+                  ></div>
+                </div>
+                <div class="attribute">Total</div>
+                <div class="value">317</div>
+              </div>
+              <div class="basestats__type"></div>
+            </div>
+            <div contentID="3" class="evolution content hidden">
+              <h3>Evolution Chain</h3>
+              <div class="evolution__chain">
+                <div class="evolution__chain--block">
+                  <div class="poke__evol">
+                    <img
+                      src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+                      alt=""
+                    />
+                    <p>Bulbasaur</p>
+                  </div>
+                  <h3>Lvl 16</h3>
+
+                  <div class="poke__evol">
+                    <img
+                      src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+                      alt=""
+                    />
+                    <p>Ivysaur</p>
+                  </div>
+                </div>
+                <div class="evolution__chain--block">
+                  <div class="poke__evol">
+                    <img
+                      src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+                      alt=""
+                    />
+                    <p>Ivysaur</p>
+                  </div>
+                  <h3>Lvl 32</h3>
+
+                  <div class="poke__evol">
+                    <img
+                      src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
+                      alt=""
+                    />
+                    <p>Venusaur</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div contentID="4" class="moves content hidden"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

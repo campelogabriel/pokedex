@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* Se for usar em projetos que ja estejam normalizados, retire todo esse seletor */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Aqui começa a estilização */
+
+.container {
+  max-width: 45rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pokecard {
+  font-family: "Inter", sans-serif;
+  border-radius: 32px;
+  width: 320px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.pokecard__header {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 28px 28px 16px;
+  color: #fff;
+}
+
+.pokecard__header--name {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.pokecard__header--heading {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.pokecard__header--types {
+  grid-column: 1;
+  margin-top: 8px;
+  display: flex;
+  gap: 6px;
+}
+
+.pokecard__header--id {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.type {
+  font-size: 12px;
+  border-radius: 16px;
+  padding: 4px 12px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  background-color: inherit;
+  backdrop-filter: brightness(85%);
+}
+
+.pokecard__header--id {
+  justify-self: flex-end;
+}
+
+/* stats */
+
+.pokecard__stats {
+  position: relative;
+  top: -35px;
+  background-color: #fff;
+  /* flex: 1; */
+  height: 44%;
+  border-radius: 30px 30px 0px 0px;
+
+  padding: 24px 16px 2px;
+}
+
+/* MAIN IMAGE */
+
+.poke__img {
+  position: absolute;
+  top: -47%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+}
+
+/* TABS */
+
+.pokecard__stats--tabbed {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #bbb;
+  padding-bottom: 10px;
+  /* width: 50px; */
+  font-weight: 600;
+}
+
+.table:hover {
+  cursor: pointer;
+}
+
+.table-active {
+  color: #222;
+  border-bottom: 2px solid #3f3fff;
+}
+
+/* ABOUT TAB */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 7px;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  row-gap: 6px;
+  padding: 16px 0 0 0;
+}
+
+.heading-breeding {
+  color: #333;
+  font-size: 14px;
+}
+
+/* BASESTATS TAB */
+
+.basestats {
+  display: flex;
+  flex-direction: column;
+}
+
+.basestats__grid {
+  display: grid;
+  grid-template-columns: 60px 25px 1fr;
+  align-content: center;
+  align-items: center;
+  row-gap: 8px;
+  padding: 16px 0 0 0;
+  flex: 3;
+}
+
+.basestats__type {
+  flex: 1;
+}
+
+/* EVOLUTION TAB */
+.evolution {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 16px;
+  /* padding: 2.4rem 0 0 0; */
+}
+
+.evolution img {
+  width: 80px;
+  height: 80px;
+}
+
+.evolution h3 {
+  font-size: 12px;
+}
+
+.evolution p {
+  font-size: 12px;
+  /* font-weight: 600; */
+}
+
+.evolution__chain {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.evolution__chain--block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.poke__evol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* info generalista */
+.attribute {
+  color: #777;
+  font-size: 12px;
+}
+
+.value {
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+  justify-self: flex-start;
+  font-weight: 500;
+}
+
+.bar {
+  position: relative;
+  width: 100%;
+  border-radius: 60px;
+  height: 4px;
+  background-color: #eee;
+}
+
+.bar__progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 9;
+}
+
+.genders {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
